@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <title>Simple Todo App</title>
+</head>
+
+<body>
+  <style type="text/css">
+    .btn-edit{
+  right: 42px;
+}
+body{
+  background-color:#0dcaf0;
+}
+    @media only screen and (max-width: 500px){
+    .col-4{
+        width: 100%;
+    }
+}
+    </style>
+   <div class="container">
+      <div class="row justify-content-center m-5 text-primary">
+        <div class="col-4">
+          <header class="header">
+            <h1 class="heading text-center">Simple Todo List</h1>
+          </header>
+        </div>
+      </div>
+    </div>
+    <section class="section form">
+      <div class="container">
+        <div class="row justify-content-center">
+         <div class="col-4">
+            <form action="" class="task-form">
+              <div class="input-group mb-4">
+                <input
+                  type="text"
+                  class="task form-control" name="task" placeholder="Add to list"
+                />
+                <button
+                  class="btn btn-outline-secondary btn-primary btn-add fw-bolder text-warning"
+                >
+                  Add
+                </button>
+                 <button
+                  class="btn btn-outline-secondary btn-warning btn-update fw-bolder" hidden 
+                >
+                Update
+                </button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section list">
+      <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-4 result" >
+            <ul class="task-list list-group">
+            <li class="list-group-item bg-light text-dark border border-light mb-4">xxxxx
+            <button onclick="editTask()" class="btn btn-primary position-absolute top-0 btn-edit h-100"><i class="bi bi-pencil-square"></i></button>
+            <button onclick="deleteTask()"class="btn btn-danger position-absolute top-0 end-0 h-100 btn-delete "><i class="bi bi-trash"></i></button>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="summary">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-4">
+            <div class="summary-text text-end">
+              You have <span class="number fw-bold"></span> pending tasks
+              <button class="btn btn-clear btn-danger fw-bolder">clearAll</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
